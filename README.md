@@ -36,18 +36,18 @@ Visit: http://127.0.0.1:5000/api/tree
 
 ## How to Test the API (In a Second Terminal)
 
-1. Add a root node:
-   curl -X POST http://127.0.0.1:5000/api/tree \
-     -H "Content-Type: application/json" \
-     -d '{"label": "root", "parentId": null}'
+1. Open a second terminal and activate the virtual environment:
+   source venv/bin/activate
 
-2. Add a child node:
-   curl -X POST http://127.0.0.1:5000/api/tree \
-     -H "Content-Type: application/json" \
-     -d '{"label": "child1", "parentId": 1}'
+2. Add a root node:
+   curl -X POST http://127.0.0.1:5000/api/tree -H "Content-Type: application/json" -d "{\"label\": \"root\", \"parentId\": null}"
 
-3. View the tree:
+3. Add a child node:
+   curl -X POST http://127.0.0.1:5000/api/tree -H "Content-Type: application/json" -d "{\"label\": \"child1\", \"parentId\": 1}"
+
+4. View the full tree structure:
    curl http://127.0.0.1:5000/api/tree
+
 
 ---
 
