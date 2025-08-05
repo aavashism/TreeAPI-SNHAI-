@@ -19,16 +19,20 @@ treeapi/
 
 🚀 How to Run the Server
 
-1. Open a terminal and activate your virtual environment (if used):
+1. Create a virtual environment in the correct directory:
+
+   python3 -m venv venv
+   
+3. Open a terminal and activate your virtual environment (if used):
    source venv/bin/activate
 
-2. Install dependencies:
+4. Install dependencies:
    pip install -r requirements.txt
 
-3. Start the Flask server:
+5. Start the Flask server:
    python app.py
 
-4. Visit:
+6. Visit:
    http://127.0.0.1:5000/api/tree
 
 ---
